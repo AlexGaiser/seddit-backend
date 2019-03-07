@@ -25,7 +25,7 @@ SECRET_KEY = 'y)17$=wh$3tabv&7&@#o#2e33=h3@esq9xm@mqjpx6bu%i5!qr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['djangonlp-env.ugtmwmerxj.us-east-1.elasticbeanstalk.com', 
+ALLOWED_HOSTS = ['DjangoTutorial-env.z2mmafubcw.us-east-1.elasticbeanstalk.com', 
 'localhost' 
 ]
 
