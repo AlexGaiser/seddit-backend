@@ -2,18 +2,18 @@ from django.shortcuts import render
 from django.http import JsonResponse, HttpResponse
 from django.core import serializers
 import sqlalchemy
+from rest_framework import generics
 
-# from reddit.models import RedditPostsHot, RedditPosts
-# from reddit.serializers import RedditSerializer
-# from rest_framework import generics
+from reddit.models import RedditPosts
+from reddit.serializers import RedditSerializer
 # import cfg, schema, nlp_script, insert_pgdb, geddit
 # from reddit.collection_app import geddit, nlp_script
 from django.contrib.postgres.search import SearchVector
 
 
-# class RedditListCreate(generics.ListCreateAPIView):
-#     queryset = RedditPostsHot.objects.filter(karma__gte = 10000)[:10]
-#     serializer_class = RedditSerializer
+class RedditListCreate(generics.ListCreateAPIView):
+    queryset = RedditPosts.objects.filter(karma__gte = 10000)[:10]
+    serializer_class = RedditSerializer
     
 
 def Main(request):
