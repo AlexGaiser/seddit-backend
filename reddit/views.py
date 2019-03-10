@@ -3,9 +3,9 @@ from django.http import JsonResponse, HttpResponse
 from django.core import serializers
 import sqlalchemy
 
-from reddit.models import RedditPostsHot, RedditPosts
-from reddit.serializers import RedditSerializer
-from rest_framework import generics
+# from reddit.models import RedditPostsHot, RedditPosts
+# from reddit.serializers import RedditSerializer
+# from rest_framework import generics
 # import cfg, schema, nlp_script, insert_pgdb, geddit
 # from reddit.collection_app import geddit, nlp_script
 from django.contrib.postgres.search import SearchVector
