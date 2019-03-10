@@ -13,6 +13,7 @@ client_id = "CuZZ9Hw2-lENkQ"
 client_secret = "Cu8ruqL1A5LBGHOiGJ32QISpomw"
 password = "A2sSaQq9w4f5E49"
 username = "RavenousDataBot"
+
 if 'RDS_DB_NAME' in os.environ:
     DATABASES = {
         'default': {
@@ -33,7 +34,7 @@ if 'RDS_DB_NAME' in os.environ:
     dbport = os.environ['RDS_PORT']
 
     db = create_engine('postgresql+psycopg2:///%s:%s@%s/%s:%s' % (dbuser,dbpassword, dbhost, dbport, dbname))
-
+    
     print(db)
 else:
     dbname = 'django1'
