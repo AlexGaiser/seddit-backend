@@ -17,7 +17,7 @@ def get_reddit_data(**kwargs):
                     client_id = cfg.client_id,
                     client_secret = cfg.client_secret,
                     user_agent = 'RavenousDataBot test friendship maker v0.1')
-    
+
     subreddit = r.subreddit(subreddit)
     
     sub_sort = ''
@@ -58,7 +58,7 @@ def get_reddit_data(**kwargs):
         if not table in meta.tables:
             sc.create_table_reddit(table)
         try:
-            insert_pgdb('django1', table, post_dict)
+            insert_pgdb(cfg.dbname, table, post_dict)
         except:
             repeated_post +=1
             print('not able to insert')
@@ -101,7 +101,7 @@ def reddit_search(search):
         if not table in meta.tables:
             sc.create_table_reddit(table)
         try:
-            insert_pgdb('django1', table, post_dict)
+            insert_pgdb(cfg.dbname, table, post_dict)
         except:
             repeated_post +=1
             if repeated_post >=20:

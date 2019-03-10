@@ -15,7 +15,7 @@ from textblob import TextBlob
 
 import reddit.collection_app.schema as sc
 from reddit.collection_app.insert_pgdb import insert_pgdb
-from reddit.collection_app.cfg import meta, db
+from reddit.collection_app.cfg import meta, db, dbname
 
 Session = sessionmaker(bind = db)
 
@@ -44,8 +44,8 @@ def sentiment(queryset, query):
             "subjectivity": numpy.mean(subjectivity),
             "query": query
         }
-    insert_pgdb('django1', 'nlp_record', data)
-
+    insert_pgdb(dbname, 'nlp_record', data)
+    
     
     return data
     # search2 = session.query(sc.RedditHot).filter(func.length(sc.RedditHot.body) > 1000).first()

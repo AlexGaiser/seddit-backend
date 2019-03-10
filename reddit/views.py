@@ -44,7 +44,6 @@ def Subreddit(request, search):
     if len(posts)<300:
         geddit.get_reddit_data(subreddit=search, sort="top", filter='all', limit=1000)
 
-
     posts = RedditPosts.objects.filter(subreddit__iexact=str(search))
     
     if len(posts) >=300:

@@ -6,7 +6,6 @@ from sqlalchemy.ext.declarative import declarative_base
 
 from reddit.collection_app.cfg import db, meta
 
-# engine = create_engine('postgresql+psycopg2:///django1', echo=True)
 Base = declarative_base()
 
 
