@@ -31,8 +31,11 @@ if 'RDS_DB_NAME' in os.environ:
     dbpassword = os.environ['RDS_PASSWORD']
     dbhost = os.environ['RDS_HOSTNAME']
     dbport = os.environ['RDS_PORT']
+    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
 
-    db = create_engine('postgresql+psycopg2:///%s:%s@%s/%s:%s' % (dbuser,dbpassword, dbhost, dbport, dbname))
+    basdir=os.path.abspath(os.path.dirname(__file__))
+
+    db = create_engine("postgres:///%s:%s@%s/%s:%s" % (dbuser,dbpassword, dbhost, dbport, dbname))
     
     print(db)
 else:
