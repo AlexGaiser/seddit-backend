@@ -1,6 +1,6 @@
 from django.db import models
 
-class RedditPosts(models.Model):
+class RedditPost(models.Model):
     post_id = models.CharField(unique=True, max_length=6, blank=True, null=True)
     title = models.CharField(max_length=1000, blank=True, null=True)
     body = models.TextField(blank=True, null=True)
@@ -12,7 +12,6 @@ class RedditPosts(models.Model):
     collected_date = models.CharField(max_length=100, blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'reddit_posts'
 
 # class RedditPostsHot(models.Model):

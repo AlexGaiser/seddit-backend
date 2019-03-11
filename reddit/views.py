@@ -4,7 +4,7 @@ from django.core import serializers
 import sqlalchemy
 from rest_framework import generics
 
-from reddit.models import RedditPosts
+from reddit.models import RedditPost
 from reddit.serializers import RedditSerializer
 # import cfg, schema, nlp_script, insert_pgdb, geddit
 # from reddit.collection_app import geddit, nlp_script
@@ -12,9 +12,9 @@ from django.contrib.postgres.search import SearchVector
 
 
 class RedditListCreate(generics.ListCreateAPIView):
-    queryset = RedditPosts.objects.filter(karma__gte = 10000)[:10]
+    queryset = RedditPost.objects.filter(karma__gte = 10000)[:10]
     serializer_class = RedditSerializer
-    
+
 
 def Main(request):
     # qs = RedditPosts.objects.order_by('-collected_date')[:20]
