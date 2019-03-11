@@ -7,7 +7,7 @@ from rest_framework import generics
 from reddit.models import RedditPost
 from reddit.serializers import RedditSerializer
 # import cfg, schema, nlp_script, insert_pgdb, geddit
-# from reddit.collection_app import geddit, nlp_script
+from reddit.collection_app import geddit, nlp_script
 from django.contrib.postgres.search import SearchVector
 
 
@@ -17,22 +17,13 @@ class RedditListCreate(generics.ListCreateAPIView):
 
 
 def Main(request):
-    # qs = RedditPosts.objects.order_by('-collected_date')[:20]
+    # qs = RedditPost.objects.order_by('-collected_date')[:20]
     # qs = list(qs.values())
 
     # return JsonResponse({'data':qs}, safe = False)
     return HttpResponse("Hello, world.This means that everything is working")
 
 
-# def subreddit_list(request):
-#     print('fetching reddit list')
-
-#     posts = RedditPosts.objects.order_by('subreddit').distinct("subreddit")
-    
-#     posts = list(posts.values())
-#     return JsonResponse({
-#             "count":len(posts),
-#             "posts": posts})
 
 # def Subreddit(request, search):
 #     try:
@@ -86,10 +77,10 @@ def Main(request):
 
 
 
-# def GetRedditData(request):
-#     geddit.get_reddit_data(subreddit="all", sort="new", limit=1000)
-#     geddit.get_reddit_data(subreddit="all", sort="rising", limit=1000)
-#     geddit.get_reddit_data(subreddit="all", sort="controversial", limit=1000)    
-#     geddit.get_reddit_data(subreddit="all", sort="hot", limit=1000) 
+def GetRedditData(request):
+    # geddit.get_reddit_data(subreddit="all", sort="new", limit=1000)
+    # geddit.get_reddit_data(subreddit="all", sort="rising", limit=1000)
+    # geddit.get_reddit_data(subreddit="all", sort="controversial", limit=1000)    
+    geddit.get_reddit_data(subreddit="all", sort="hot", limit=1000) 
     
-#     return JsonResponse({'message':'datacollected'})
+    return JsonResponse({'message':'datacollected'})

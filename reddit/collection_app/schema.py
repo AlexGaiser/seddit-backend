@@ -10,62 +10,62 @@ Base = declarative_base()
 
 
 
-class RedditNew(Base):
-    __tablename__ = "reddit_posts_new"
+# class RedditNew(Base):
+#     __tablename__ = "reddit_posts_new"
     
-    id = Column('id', Integer, primary_key = True)
-    post_id = Column('post_id', String )
-    title = Column('title', String)
-    body = Column('body', String)
-    karma = Column('karma', Integer)
-    subreddit = Column('subreddit', String)
-    submission_link_url = Column("submission_link_url", String)
-    submission_url = Column("submission_url", String)
-    date_time = Column('date_time', String)
-    collected_date = Column("collected_date", String)
+#     id = Column('id', Integer, primary_key = True)
+#     post_id = Column('post_id', String )
+#     title = Column('title', String)
+#     body = Column('body', String)
+#     karma = Column('karma', Integer)
+#     subreddit = Column('subreddit', String)
+#     submission_link_url = Column("submission_link_url", String)
+#     submission_url = Column("submission_url", String)
+#     date_time = Column('date_time', String)
+#     collected_date = Column("collected_date", String)
 
 
 
-    def __repr__(self):
-        return "<Posts(post_id= '%s', title= '%s', body= '%s', karma= '%s', subreddit= '%s', submission_link_url = '%s')>" % (self.post_id, self.title, self.body, self.karma, self.subreddit,self.submission_link_url)
+#     def __repr__(self):
+#         return "<Posts(post_id= '%s', title= '%s', body= '%s', karma= '%s', subreddit= '%s', submission_link_url = '%s')>" % (self.post_id, self.title, self.body, self.karma, self.subreddit,self.submission_link_url)
 
-class RedditHot(Base):
-    __tablename__ = "reddit_posts_hot"
+# class RedditHot(Base):
+#     __tablename__ = "reddit_posts_hot"
     
-    id = Column('id', Integer, primary_key = True)
-    post_id = Column('post_id', String )
-    title = Column('title', String)
-    body = Column('body', String)
-    karma = Column('karma', Integer)
-    subreddit = Column('subreddit', String)
-    submission_link_url = Column("submission_link_url", String)
-    submission_url = Column("submission_url", String)
-    date_time = Column('date_time', String)
-    collected_date = Column("collected_date", String)
+#     id = Column('id', Integer, primary_key = True)
+#     post_id = Column('post_id', String )
+#     title = Column('title', String)
+#     body = Column('body', String)
+#     karma = Column('karma', Integer)
+#     subreddit = Column('subreddit', String)
+#     submission_link_url = Column("submission_link_url", String)
+#     submission_url = Column("submission_url", String)
+#     date_time = Column('date_time', String)
+#     collected_date = Column("collected_date", String)
 
 
-    def __repr__(self):
-        return "<Posts(post_id= '%s', title= '%s', body= '%s', karma= '%s', subreddit= '%s', submission_link_url = '%s')>" % (self.post_id, self.title, self.body, self.karma, self.subreddit,self.submission_link_url)
+#     def __repr__(self):
+#         return "<Posts(post_id= '%s', title= '%s', body= '%s', karma= '%s', subreddit= '%s', submission_link_url = '%s')>" % (self.post_id, self.title, self.body, self.karma, self.subreddit,self.submission_link_url)
 
 
-class RedditRising(Base):
-    __tablename__ = "reddit_posts_rising"
+# class RedditRising(Base):
+#     __tablename__ = "reddit_posts_rising"
     
-    id = Column('id', Integer, primary_key = True)
-    post_id = Column('post_id', String )
-    title = Column('title', String)
-    body = Column('body', String)
-    karma = Column('karma', Integer)
-    subreddit = Column('subreddit', String)
-    submission_link_url = Column("submission_link_url", String)
-    submission_url = Column("submission_url", String)
-    date_time = Column('date_time', String)
-    collected_date = Column("collected_date", String)
+#     id = Column('id', Integer, primary_key = True)
+#     post_id = Column('post_id', String )
+#     title = Column('title', String)
+#     body = Column('body', String)
+#     karma = Column('karma', Integer)
+#     subreddit = Column('subreddit', String)
+#     submission_link_url = Column("submission_link_url", String)
+#     submission_url = Column("submission_url", String)
+#     date_time = Column('date_time', String)
+#     collected_date = Column("collected_date", String)
 
 
 
-    def __repr__(self):
-        return "<Posts(post_id= '%s', title= '%s', body= '%s', karma= '%s', subreddit= '%s', submission_link_url = '%s')>" % (self.post_id, self.title, self.body, self.karma, self.subreddit,self.submission_link_url)
+#     def __repr__(self):
+#         return "<Posts(post_id= '%s', title= '%s', body= '%s', karma= '%s', subreddit= '%s', submission_link_url = '%s')>" % (self.post_id, self.title, self.body, self.karma, self.subreddit,self.submission_link_url)
 
 def create_table_nlp(name):
             'creating table'

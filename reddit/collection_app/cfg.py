@@ -26,16 +26,18 @@ if 'RDS_DB_NAME' in os.environ:
         }
     }
 
-dbname = os.environ['RDS_DB_NAME']
-dbuser = os.environ['RDS_USERNAME']
-dbpassword = os.environ['RDS_PASSWORD']
-dbhost = os.environ['RDS_HOSTNAME']
-dbport = os.environ['RDS_PORT']
+    dbname = os.environ['RDS_DB_NAME']
+    dbuser = os.environ['RDS_USERNAME']
+    dbpassword = os.environ['RDS_PASSWORD']
+    dbhost = os.environ['RDS_HOSTNAME']
+    dbport = os.environ['RDS_PORT']
 
-db = create_engine('postgresql+psycopg2:///%s:%s@%s/%s:%s' % (dbuser,dbpassword, dbhost, dbport, dbname))
+    db = create_engine('postgresql+psycopg2:///%s:%s@%s/%s:%s' % (dbuser,dbpassword, dbhost, dbport, dbname))
     
-print(db)
-
+    print(db)
+else:
+    dbname = 'django2'
+    db = create_engine('postgresql+psycopg2:///'+str(dbname))
 
 
 meta = MetaData(bind=db, reflect=True )
