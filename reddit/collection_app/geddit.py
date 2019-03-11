@@ -58,7 +58,9 @@ def get_reddit_data(**kwargs):
         if not table in meta.tables:
             sc.create_table_reddit(table)
         try:
-            insert_pgdb(cfg.dbname, table, post_dict)
+            insert_pgdb(post_dict)
+
+            # insert_pgdb(cfg.dbname, table, post_dict)
         except:
             repeated_post +=1
             print('not able to insert')
@@ -101,7 +103,9 @@ def reddit_search(search):
         if not table in meta.tables:
             sc.create_table_reddit(table)
         try:
-            insert_pgdb(cfg.dbname, table, post_dict)
+            insert_pgdb(post_dict)
+
+            # insert_pgdb(cfg.dbname, table, post_dict)
         except:
             repeated_post +=1
             if repeated_post >=20:

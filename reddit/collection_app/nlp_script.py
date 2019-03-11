@@ -44,7 +44,9 @@ def sentiment(queryset, query):
             "subjectivity": numpy.mean(subjectivity),
             "query": query
         }
-    insert_pgdb(dbname, 'nlp_record', data)
+    # insert_pgdb(dbname, 'nlp_record', data)
+
+    insert_pgdb(data)
     
     
     return data
