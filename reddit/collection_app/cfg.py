@@ -34,7 +34,8 @@ if 'RDS_DB_NAME' in os.environ:
 
     basdir=os.path.abspath(os.path.dirname(__file__))
 
-    db = create_engine("postgres:///%s:%s@aayoxvcb6ixvlm.csv8i3eqbu4y.us-east-1.rds.amazonaws.com:%s/%s" % (dbuser,dbpassword, dbport, dbname))
+    db = create_engine("postgresql+psycopg2:///alexgaiser:Sp0t-w3ld@aayoxvcb6ixvlm.csv8i3eqbu4y.us-east-1.rds.amazonaws.com:5432/ebdb")
+    # % (dbuser,dbpassword, dbport, dbname))
     
     print(db)
 else:
