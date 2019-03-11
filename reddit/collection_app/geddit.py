@@ -3,7 +3,7 @@ import reddit.collection_app.schema as sc
 import praw, time, pdb, re, os, csv, datetime
 
 import reddit.collection_app.cfg as cfg
-from reddit.collection_app.cfg import meta, db
+# from reddit.collection_app.cfg import meta, db
 from reddit.collection_app.insert_pgdb import insert_pgdb
 from reddit.collection_app.nlp_script import sentiment
 
@@ -55,8 +55,8 @@ def get_reddit_data(**kwargs):
             }
         print(post_dict)
         
-        if not table in meta.tables:
-            sc.create_table_reddit(table)
+        # if not table in meta.tables:
+        #     sc.create_table_reddit(table)
         try:
             insert_pgdb(post_dict)
 
@@ -100,8 +100,8 @@ def reddit_search(search):
             }
         print(post_dict)
     
-        if not table in meta.tables:
-            sc.create_table_reddit(table)
+        # if not table in meta.tables:
+        #     sc.create_table_reddit(table)
         try:
             insert_pgdb(post_dict)
 

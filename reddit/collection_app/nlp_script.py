@@ -13,14 +13,14 @@ from sqlalchemy.ext.declarative import declarative_base
 
 from textblob import TextBlob
 
-import reddit.collection_app.schema as sc
+# import reddit.collection_app.schema as sc
 from reddit.collection_app.insert_pgdb import insert_pgdb
-from reddit.collection_app.cfg import meta, db, dbname
+# from reddit.collection_app.cfg import meta, db, dbname
 
-Session = sessionmaker(bind = db)
+# Session = sessionmaker(bind = db)
 
 
-session = Session()
+# session = Session()
 # search2 = session.query(Content).filter_by(reviewid = 16).first()
 
 def sentiment(queryset, query):

@@ -4,9 +4,9 @@ from sqlalchemy.orm import sessionmaker
 
 from sqlalchemy.ext.declarative import declarative_base
 
-from reddit.collection_app.cfg import db, meta
+# from reddit.collection_app.cfg import db, meta
 
-Base = declarative_base()
+# Base = declarative_base()
 
 
 
@@ -67,39 +67,39 @@ Base = declarative_base()
 #     def __repr__(self):
 #         return "<Posts(post_id= '%s', title= '%s', body= '%s', karma= '%s', subreddit= '%s', submission_link_url = '%s')>" % (self.post_id, self.title, self.body, self.karma, self.subreddit,self.submission_link_url)
 
-def create_table_nlp(name):
-            'creating table'
-            new_table = Table(name, meta,
-            Column('id', Integer, primary_key = True),
-            Column('post_id', String, unique= True),
-            Column('sentiment_polarity', Integer),
-            Column('sentiment_subjectivity', String),
-            )
-            meta.create_all(db)
+# def create_table_nlp(name):
+#             'creating table'
+#             new_table = Table(name, meta,
+#             Column('id', Integer, primary_key = True),
+#             Column('post_id', String, unique= True),
+#             Column('sentiment_polarity', Integer),
+#             Column('sentiment_subjectivity', String),
+#             )
+#             meta.create_all(db)
 
 
-def create_table_reddit(name):
-            'creating table'
-            new_table = Table(name, meta,
-            Column('id', Integer, primary_key = True),
-            Column('post_id', String, unique= True),
-            Column('title', String),
-            Column('body', String),
-            Column('karma', Integer),
-            Column('subreddit', String),
-            Column("submission_link_url", String),
-            Column("submission_url", String),
-            Column('date_time', String),
-            Column("collected_date", String)
-            )
+# def create_table_reddit(name):
+#             'creating table'
+#             new_table = Table(name, meta,
+#             Column('id', Integer, primary_key = True),
+#             Column('post_id', String, unique= True),
+#             Column('title', String),
+#             Column('body', String),
+#             Column('karma', Integer),
+#             Column('subreddit', String),
+#             Column("submission_link_url", String),
+#             Column("submission_url", String),
+#             Column('date_time', String),
+#             Column("collected_date", String)
+#             )
             
-            meta.create_all(db)
+#             meta.create_all(db)
 
 
-def subreddit_search(subreddit):
-    return 
+# def subreddit_search(subreddit):
+#     return 
 
-def search_db(search):
-    return 
+# def search_db(search):
+#     return 
 
-Base.metadata.create_all(db)
+# Base.metadata.create_all(db)

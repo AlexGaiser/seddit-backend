@@ -11,7 +11,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 import reddit.collection_app.schema as sc
 
-from reddit.collection_app.cfg import db, meta
+# from reddit.collection_app.cfg import db, meta
 
 from django.shortcuts import render
 from django.conf import settings
