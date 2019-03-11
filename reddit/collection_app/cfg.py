@@ -31,7 +31,6 @@ if 'RDS_DB_NAME' in os.environ:
     dbpassword = os.environ['RDS_PASSWORD']
     dbhost = os.environ['RDS_HOSTNAME']
     dbport = os.environ['RDS_PORT']
-    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
 
     basdir=os.path.abspath(os.path.dirname(__file__))
 
