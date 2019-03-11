@@ -46,7 +46,7 @@ def sentiment(queryset, query):
         }
     # insert_pgdb(dbname, 'nlp_record', data)
 
-    insert_pgdb(data)
+    # insert_pgdb(data)
     
     
     return data
