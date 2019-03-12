@@ -18,27 +18,8 @@ def startpage(request):
     return HttpResponse("Hello, world.This means that everything is working")
 
 def dbpage(request):
-    if 'RDS_DB_NAME' in os.environ:
-        DATABASES = {
-                'DEPLOYED': 'Deployed',
-                'ENGINE': 'django.db.backends.postgresql_psycopg2',
-                'NAME': os.environ['RDS_DB_NAME'],
-                'USER': os.environ['RDS_USERNAME'],
-                'PASSWORD': os.environ['RDS_PASSWORD'],
-                'HOST': os.environ['RDS_HOSTNAME'],
-                'PORT': os.environ['RDS_PORT'],
-            }
-    else:
-        DATABASES = {
-                'LOCAL': 'local',
-                'ENGINE': 'django.db.backends.postgresql_psycopg2',
-                'NAME': 'django2',
-                'USER': '',
-                'PASSWORD': '',
-                'HOST': '',
-                'PORT': '',
-        }
-        
+   
     
-    return JsonResponse(DATABASES, safe=False)
+    
+    return HttpResponse("database is running.")
     # return HttpResponse("Hello, world.This means that everything is working")

@@ -82,7 +82,7 @@ def reddit_search(search):
                     user_agent = 'RavenousDataBot test friendship maker v0.1')
                     
     subreddit = r.subreddit(subreddit)
-    sub_search = subreddit.search(search, sort = 'relevance', limit=500)
+    sub_search = subreddit.search(search, sort = 'relevance', limit=1000)
     
     
     
