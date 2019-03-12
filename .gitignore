@@ -3,4 +3,5 @@
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
-cfg.py
+reddit/collection_app/cfg.py
+.DS_Store
