@@ -6,7 +6,7 @@ django-cors-headers==2.5.0
 djangorestframework==3.11.2
 idna==2.8
 nltk==3.4.5
-numpy==1.16.2
+numpy==1.22.0
 praw==6.1.1
 prawcore==1.0.1
 psycopg2==2.7.7
